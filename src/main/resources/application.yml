@@ -1,18 +1,15 @@
 # Tomcat
 server:
-    tomcat:
-        max-threads: 10
-        min-spare-threads: 10
-    port: 8080
+  port: 8080
 
 # mysql
 spring:
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8
+        url: jdbc:mysql://172.16.21.100:3306/gulimall_oms?useUnicode=true&characterEncoding=UTF-8&useSSL=false
         username: root
-        password: sdliang
+        password: root
     jackson:
         time-zone: GMT+8
         date-format: yyyy-MM-dd HH:mm:ss
@@ -23,3 +20,5 @@ spring:
 mybatis:
     mapperLocations: classpath:mapper/**/*.xml
 
+renren:
+  database: mysql
